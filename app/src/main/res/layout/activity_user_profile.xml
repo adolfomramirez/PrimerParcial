@@ -1,0 +1,71 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="user"
+            type="com.example.primerparcial.User" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UserProfileActivity">
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.username}"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.email}"
+            android:layout_below="@id/tvUserName"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.name}"
+            android:layout_below="@id/tvEmail"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.phone}"
+            android:layout_below="@id/tvName"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tvAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(user.age)}"
+            android:layout_below="@id/tvPhone"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"/>
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actualizar"
+            android:layout_below="@id/tvAge"
+            android:layout_marginTop="32dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</layout>
